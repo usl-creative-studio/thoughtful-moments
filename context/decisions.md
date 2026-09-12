@@ -305,3 +305,35 @@ A log of why things are built the way they are. Write once, never delete.
   replaces "everything I gave her was a function of what I earned", which presumed a her.
 - An interim draft said "I am single" and "the far side of a long marriage"; the founder
   removed both the same day. Do not reintroduce a status line.
+
+## 2026-09-11 -- Legal pages, link preview and favicon (Prompt 9)
+- The two legal pages are headings and visible notes, not text. Each section carries a
+  "TODO, founder" label in small caps and a sentence saying what the reviewed wording must
+  cover (refund until the date is confirmed, balance two weeks out, the delivery commitment,
+  the waiver and contraindication card, data used for the night only). The notes are shown,
+  not hidden in comments, so nobody on staging mistakes a draft for terms; both pages open
+  with "Draft. Reviewed text to follow." Shared shape in `components/legal-page.tsx`; a
+  "Questions" section carries the hello@ address from the same env var as the footer.
+- The Open Graph image and the favicon are drawn in Merriweather, not Fraunces: the
+  Merriweather decision above supersedes the build sequence, which still names Fraunces in
+  Prompt 9. Satori (next/og) reads no CSS and no woff2, so a static Merriweather 500 TTF
+  (OFL, fetched from Google Fonts) is vendored at `app/fonts/merriweather-500.ttf` and read
+  from disk at build; the tokens it needs are repeated as plain values in `lib/og.ts`. Small
+  caps are not available to satori, so the wordmark on the preview is uppercase at caption
+  size with the 0.06em tracking.
+- The favicon letter is "T", not the "F" the build sequence asked for: that F was Firsthand,
+  the rename the founder reverted. Ink T on a bone square at 32px (`app/icon.tsx`) and
+  180px (`app/apple-icon.tsx`) for a phone home screen, since the founder reads the page on
+  a phone. `/favicon.ico` no longer 404s: browsers take the linked icon.
+- Metadata: `metadataBase` comes from `NEXT_PUBLIC_SITE_URL` with a localhost fallback so
+  `next build` never fails on a fresh clone; canonical is `/` on the page and `/terms`,
+  `/privacy` on the legal pages; Open Graph and Twitter card tags carry the approved title
+  and description; the title template appends "· Thoughtful Moments" on subpages. `noindex,
+  nofollow` stays for the 30-day test and is inherited by every route.
+- Verified in a scratchpad copy of the tree built with webpack (`next build --webpack`),
+  because a second build in the project directory would have collided with the Prompt 4
+  session's `.next`, and Turbopack refuses a junctioned `node_modules`. The project itself
+  still builds with Turbopack; the webpack build was for verification only.
+- Reopen when the founder supplies the reviewed text (replace the notes and the draft line),
+  when documentary photography from night one exists (the preview may then carry the room),
+  or if the founder wants a mark rather than a letter.

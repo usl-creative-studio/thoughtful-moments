@@ -145,6 +145,25 @@ Last updated: 2026-09-11
   Promoted to `main` the same day (fast-forward to `a64808b`) at the founder's request; the
   staging preview was not confirmed on a phone first. Read the production URL on a phone.
 
+- [x] Prompt 9 (legal pages, metadata, OG image, favicon), on `staging`: `app/terms/page.tsx`
+  and `app/privacy/page.tsx` over `components/legal-page.tsx` (display-2 title, the caption
+  "Draft. Reviewed text to follow.", an h2 per section with a visible "TODO, founder" note
+  saying what the reviewed text must cover, a "Questions" section with the hello@ address; no
+  legal text, no lorem); `app/opengraph-image.tsx` (1200x630, bone, the headline in
+  Merriweather 500, the wordmark bottom left in letter-spaced uppercase); `app/icon.tsx` (32px)
+  and `app/apple-icon.tsx` (180px), an ink "T" on bone; `lib/og.ts` (tokens as plain values,
+  the vendored `app/fonts/merriweather-500.ttf` read at build); `app/layout.tsx` metadata
+  (`metadataBase` from `NEXT_PUBLIC_SITE_URL`, canonical, Open Graph and Twitter tags, title
+  template, `noindex, nofollow` kept). Reasoning in `context/decisions.md` (Prompt 9 entry);
+  the copy document lists the headings. Gates: typecheck and lint clean; `next build` clean in
+  a scratchpad copy; the rendered head carries `noindex, nofollow`, the canonical, `og:image`
+  at 1200x630 with alt, the icon links; /terms and /privacy reach from the footer with their own
+  titles and canonicals; heading outline h1 then h2s; zero borders; no horizontal overflow at
+  390 or 1280; the only console error left is the Vercel insights script off Vercel. The OG
+  image, both icons and both pages at 390 and 1280 were shown in the session.
+  Output still to show: a link preview from a real deploy (the OG URL is absolute only once
+  `NEXT_PUBLIC_SITE_URL` is set in Vercel).
+
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
@@ -152,11 +171,13 @@ Last updated: 2026-09-11
 ## What is next
 - [ ] Founder: put `RESEND_API_KEY` and `NOTIFY_EMAIL` in `.env` (and Vercel), submit the form once, and
   confirm the email lands; that closes the Prompt 8 output gate.
-- [ ] Run Prompts 4, 9 and 10 of `usl-build/6-landing-page-build-sequence.md` on `staging`.
+- [ ] Run Prompts 4 and 10 of `usl-build/6-landing-page-build-sequence.md` on `staging` (Prompt 9 done 2026-09-11; Prompt 4 in progress in a parallel session the same day).
   Prompt 4 note: the checkout stub redirects to `/#price`, which re-mounts the page after the
   Server Action, so `scroll_price` fires a second time after any "Hold a slot" press. It goes
   away once the redirect leaves for Stripe; check the event fires once in Prompt 10.
-- [ ] `/favicon.ico` 404s on the empty page (the only console error). Prompt 9 adds the favicon and OG image.
+- [x] `/favicon.ico` 404 closed by Prompt 9 (`app/icon.tsx`); the Vercel insights script 404 off Vercel is the only console error left.
+- [ ] Founder: set `NEXT_PUBLIC_SITE_URL` in Vercel (staging and production) so the canonical and the OG image URL are absolute, then paste the staging URL into a link-preview checker and confirm the image shows.
+- [ ] Founder: write the /terms and /privacy text after professional review and replace the TODO notes (`app/terms/page.tsx`, `app/privacy/page.tsx`).
 - [ ] Founder, in parallel: two food-partner quotes and one florist quote; waiver, contraindication card and delivery-commitment wording to a professional; insurance quote; domain and hello@ mailbox; Stripe account (test mode); USPTO and domain check for Thoughtful Moments.
 - [ ] Founder edits the note in Module 8 and writes the twelve cue cards (Module 4 shows card 4 as the shape).
 - [ ] After the page is live on staging and opened on a phone: merge to main, keep `noindex`, start the 30-day experiment (warm network first, then ~$1,500 capped paid reach). Record the day-30 result in `usl-build/2-solution-mvp.md` Section 11.

@@ -237,6 +237,16 @@ Thoughtful Moments · Dallas, TX · hello@[domain] · Terms and refund policy ·
 
 (No social icons until the accounts exist.)
 
+### Legal pages (headings only; the founder writes the text after professional review)
+
+Added 2026-09-11 at Prompt 9. Each heading carries a visible "TODO, founder" note naming what the reviewed text must cover. No legal text is written; nothing below is copy the reader is meant to keep.
+
+**/terms, title "Terms and refund policy":** The deposit · The balance · Our commitment · The massage · Access to the home · Questions.
+
+**/privacy, title "Privacy":** What we collect · What it is used for · Who handles it · How long we keep it · Questions.
+
+Both pages open with the caption line "Draft. Reviewed text to follow." until the founder's text replaces the notes.
+
 ### Success and confirmation states
 
 **After the deposit (Stripe return page):**
