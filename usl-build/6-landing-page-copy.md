@@ -77,13 +77,13 @@ Language rule: "slot" is the thing he holds, "booking" is the monthly limit, "ni
 **Job:** is this for me, what is it, what do I do.
 **Paired proof or artifact:** the prepared room, empty, one candle unlit. Placeholder (directed, generated) until a documentary photograph from night one replaces it.
 
-*Thoughtful Moments · Dallas*
+*(Caption "Thoughtful Moments · Dallas" removed 2026-09-11: the header wordmark already carries the name, and the two stacked read as a duplicate.)*
 
 **You love her. That was never the question.**
 
-Her Night, Your Hands is one night at home that is unmistakably yours. We plan it, set it up while she is out, and clear it away the next morning. You give the massage.
+One night at home. You give her a massage, cue cards beside you, and when you are done, dinner is on the table. We plan it on one call, set the room while she is out, and are gone before she is home. The next morning we take it all away.
 
-We take five bookings a month. The first five are $2,500; after that, $3,500. $500 holds your slot, refundable until we confirm your date.
+We take five bookings a month. Our first five are $2,500; after that, $3,500. $500 holds your slot, refundable until we confirm your date.
 
 **[ Hold a slot ]**   Not ready? *Tell us about her.*
 
@@ -107,9 +107,9 @@ You love her, and she knows it. She also knows you have been gone since six and 
 
 **2. Two weeks out.** The balance is due and we order the food and the flowers. Your cue cards and a five-minute practice video arrive.
 
-**3. The afternoon.** Two of us arrive while she is out. The table, the linens, the candles, the scent, the music, the flowers, the food plated to your instructions. We are gone before she is home.
+**3. The afternoon.** We arrive while she is out. The massage table, the oils, the towels and linens, the candles, the scent, the music, the flowers, the dinner table laid and the food plated to your instructions. We are gone before she is home.
 
-**4. The night.** This part is yours. You hand her the card. You give her the massage, cue cards beside you. When you are done, dinner is on the table.
+**4. The night.** This part is yours. She comes home to a room she does not recognise, and you are the reason. You hand her the card. You give her the massage, cue cards beside you. When you are done, dinner is on the table.
 
 **5. The morning after.** We come back at the time we agreed and take everything away. The house looks like it did yesterday.
 
@@ -135,13 +135,14 @@ So we make sure you are not guessing. On the call, we walk through the massage s
 ### Module 5: What is included, and what is not
 
 **Job:** what am I paying for.
-**Paired proof or artifact:** plain enumeration under the Stage 5 display names. No values, no total, no icons.
+**Paired proof or artifact:** plain enumeration under the Stage 5 display names. Nine components; "The Massage Table, Oils and Linens" added 2026-09-11 so the equipment is a named part of the price. No values, no total, no icons.
 
 **What is included**
 
 **The Planning Call.** Twenty minutes with us about her. The date, the food, the card, the plan for the afternoon.
-**The Setup.** Two of us transform the room while she is out: table, linens, candles, scent, music. Gone before she is home.
-**Dinner or Tea for Two, Delivered.** From a Dallas kitchen we work with, plated to your instructions, so you serve it.
+**The Setup.** We set the room while she is out: candles, scent, music, the dinner table laid.
+**The Massage Table, Oils and Linens.** A professional massage table, essential oils, towels and fresh linens, brought in for the night and taken away with everything else.
+**Dinner for Two, Delivered.** From a Dallas kitchen we work with, plated to your instructions, so you serve it.
 **The Flowers and Your Card.** A full bouquet, and a handwritten card in your words. We draft it with you; you write it.
 **Your Cue Cards and Practice Video.** Twelve cards, one move each, and five minutes to watch the night before.
 **Conversation Cards.** For when the massage is done and dinner is on the table.
@@ -159,9 +160,9 @@ Nobody else touches her. There is no therapist. Nothing arrives in a box for you
 
 **The price**
 
-$2,500 for the first five bookings. $3,500 after that.
+$2,500 for our first five bookings. $3,500 after that.
 
-We take five a month, because two of us set up and clear away every one, and we will not send anyone else into your home.
+We take five a month, because we set up and clear away every one ourselves, and we will not send anyone else into your home.
 
 **Holding a slot.** $500 today. Fully refundable until we confirm your date on the call. The balance is due two weeks before the night, when we start ordering.
 
@@ -178,16 +179,16 @@ We take five a month, because two of us set up and clear away every one, and we 
 She will know you did not carry a table up the stairs. Everything she sees on the night is a choice you made on the call: the food, the flowers, the card in your handwriting, the massage from your hands. We handled the logistics. You handled her.
 
 **Why $2,500?**
-Two people, an afternoon and a morning in your home, food from a kitchen we trust, flowers, and the hours of planning you do not have. The price is the night done properly, once.
+A professional massage table, oils and linens, an afternoon and a morning in your home, food from a kitchen we trust, flowers, and the hours of planning you do not have. The price is the night done properly, once.
 
 **Who exactly is coming into my house?**
-The two of us. We are the founders, and for now we do every setup ourselves. We arrive at the time we agree, we take no photos, and we are gone before she is home.
+The founders. For now we do every setup ourselves. We arrive at the time we agree, we take no photos, and we leave well before she is back.
 
 **How do I get her out of the house?**
 We plan that on the call. It is usually an afternoon: a salon booking, a friend, an errand you invent. You will have a plan and a fallback before we hang up.
 
 **What if she is not into massage?**
-Then this is not the right night for her, and we would rather tell you that on the call than take your money. Ask her what she loves before you hold a slot; the tea and the dinner are available on request if that suits her better.
+Then this is not the right night for her, and we would rather tell you that on the call than take your money. Ask her what she loves before you hold a slot.
 
 **What about the food?**
 A Dallas kitchen we work with prepares it. We plate it to your instructions before we leave, so when the massage is done, you serve it. Allergies and preferences are covered on the call.
@@ -199,7 +200,7 @@ A Dallas kitchen we work with prepares it. We plate it to your instructions befo
 
 **From Irewole**
 
-I am in the same position as the man this page is written for. I love my partner, I work more hours than I would choose, and for a long time everything I gave her was a function of what I earned, not of what I paid attention to. I believe intentionality is what builds intimacy, and that intimacy is built by hand, in small deliberate acts nobody else could have done for you. Thoughtful Moments exists so that a man with no hours can still do the one thing that counts. We do everything else.
+I work more hours than I would choose, and I know exactly what a man like me does with money when he loves someone and has no time: spends it on her and calls it care. I do not want to be that man. I want to be the one who did it himself, with the room ready and the card in his handwriting. Intimacy is built by hand, in small deliberate acts nobody else could have done for you. Thoughtful Moments exists so that a man with no hours can still do the one thing that counts. We do everything else.
 
 *Irewole Akande, Dallas*
 
@@ -252,16 +253,17 @@ Thoughtful Moments · Dallas, TX · hello@[domain] · Terms and refund policy ·
 
 | Claim | Source | Confidence | Where used |
 |---|---|---|---|
-| Five bookings a month; two founders set up and clear away every one | Stage 2 capacity; Stage 4 scarcity | High (operational commitment) | Modules 1, 6, 7, 9 |
+| Five bookings a month; the founders set up and clear away every one themselves | Stage 2 capacity; Stage 4 scarcity | High (operational commitment) | Modules 1, 6, 7, 9 |
 | $2,500 first five bookings, $3,500 after | Stage 3 preliminary; Stage 4 price | Hypothesis under test | Modules 1, 6, 7 |
 | $500 deposit, refundable until date confirmed; balance two weeks before | Stage 4 terms | High (terms) | Modules 1, 3, 6, 9 |
 | Delivery commitment (room, food, flowers as agreed or no charge) | Stage 4 risk reversal; needs professional review with waiver | High as a commitment; review pending | Module 6 |
 | Planning call within two days of deposit | Stage 4 funnel | High (operational) | Modules 3, 9 |
 | Food from a Dallas kitchen "we work with" | Stage 2 partner dependency | Medium: partner not yet signed; must be true before launch | Modules 3, 5, 7 |
+| Massage table, essential oils, towels and linens brought in and removed | Founder decision 2026-09-11; equipment the founders own | High (operational) | Modules 3, 5, 7 |
 | Twelve cue cards, five-minute practice video | Stage 4 component; build task | High once built | Modules 3, 4, 5 |
 | Founders do every setup; no photos | Brand behaviour, Stage 5 | High (commitment) | Modules 5, 7 |
 | "The moment you are after, when she realises you did this" | Dream outcome, Stage 4; stated as his intent | Reasoned; not a promise | Module 4 |
-| Founder note | Founder's own words, Stage 5 discovery | Observed (founder) | Module 8 |
+| Founder note | Founder's own words, Stage 5 discovery; rewritten 2026-09-11; states no relationship status | Observed (founder) | Module 8 |
 | Reply to the form within two days | Operational commitment | High | Module 9 |
 
 No statistic, customer count, testimonial, comparative price or outcome claim appears on the page.
@@ -274,6 +276,8 @@ No statistic, customer count, testimonial, comparative price or outcome claim ap
 **Visual-authorship target:** the build must preserve: hero direction C with the room photograph and the headline; the cue card rendered as a real object; no cards, icons or accordion elsewhere; the handwritten face in exactly three places; oxblood for the CTA and step 4 only; a mobile recomposition with the CTA sticky after Module 3.
 **Patterns removed during audit:** the night-out anchor paragraph in Module 6 (argued, presumed, reintroduced a comparison); "five nights a month" replaced by "five bookings a month" and "slot" (read as one man getting five nights); no "Not X. Not Y. Just Z." constructions; no rhetorical-question stacks; no "experience" as a marketing noun; no exclamation marks.
 **Known limitations:** Track B throughout: every objection and line of avatar language is reasoned. Placeholder photography is directed and generated; it is atmospheric, not evidentiary, and must be replaced with documentary photographs from night one. The founder note is a draft for the founder's edit. The cue card copy is a shape, not the final card. The food partner is not yet signed.
+
+**Revision 2026-09-11 (copy review, 74/100 before):** the hero now states the night (a massage he gives her, cue cards beside him, then dinner) before the logistics; "our first five bookings" replaces "the first five" so the launch price is not read as each month's first five; the tea variant is off the page ("Dinner for Two, Delivered"; the tea clause in the massage question cut); step 4 gains one sentence of her coming home; "gone before she is home" reduced from four uses to two; "transform" out of the Setup line; the founder note loses "I believe intentionality is what builds intimacy". Claim ledger unchanged. Recorded in context/decisions.md.
 
 ---
 

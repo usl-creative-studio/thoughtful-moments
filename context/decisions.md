@@ -188,3 +188,120 @@ A log of why things are built the way they are. Write once, never delete.
 - Reopen if the day-30 experiment or the phone test shows men asking a question the page
   already answers (a sign the collapsed answers are not being read), or if Lighthouse flags
   the hidden panels. The open version is one prop away: `defaultValue` with all six values.
+
+## 2026-09-11 -- Tell Us About Her: the email is the record (Prompt 8)
+- The form posts to a Server Action, validates with zod and sends one email to NOTIFY_EMAIL
+  with the sender as reply-to, so the founder answers by replying. Nothing is stored (the no
+  database decision holds); the log line on failure carries the cause and no addresses.
+- The honeypot rejects by showing the same thank-you: a bot that filled it gets no email, no
+  `form_submitted` event and no hint it was caught. A visible rejection would teach it what to
+  change. State `discarded` names the case in code.
+- "Within the next 180 days" is counted on the Dallas calendar (`America/Chicago`), not the
+  server clock, so a date entered late in the evening is not a day out at Vercel's UTC. The
+  native picker learns its `min`/`max` when the date field is first focused rather than at
+  render: the page is prerendered at build, and a window computed then would age with it.
+  The action holds the real rule.
+- Resend is reached through `lib/resend.ts` with the env parsed once by `lib/env.ts`
+  (`server-only`, zod). `RESEND_FROM_EMAIL` is optional and defaults to the Resend onboarding
+  sender, which delivers to the account owner only; set it to hello@[domain] once the domain
+  is verified. With any variable missing the action fails closed: the reader sees "We could
+  not send that just now" and the server log names the variable (production checklist, 3).
+- Verified against a local stand-in for api.resend.com through the SDK's `RESEND_BASE_URL`
+  override, which captured the exact payload (subject "Tell Us About Her: February 14, 2027",
+  every answer, reply-to). The real inbox was not reached: `.env` has no key locally. That
+  last step is the founder's, and it closes the Prompt 8 output gate.
+- Reopen if submissions need a record beyond the inbox (then Supabase per tech-stack.md), or
+  if the honeypot proves insufficient against paid-reach traffic (then a timing check or
+  Turnstile, in that order).
+
+## 2026-09-11 -- The sticky bar and a fourth CTA location (Prompt 8)
+- The mobile bar carries the Button and "$500 holds your slot.", the first clause of the
+  Module 9 deposit sentence, so it introduces no new copy. Its event is
+  `cta_hold_slot_click` with `location: "sticky"`, alongside hero, price and closing, so the
+  funnel can tell a bar press from a page press.
+- It hides only while the form is in view (the prompt's rule), not near the price or closing
+  buttons: the closing button is a screen above the form on a phone, and the bar dropping
+  away as the form arrives already covers the moment he is reading the last call to action.
+- The Module 3 observer runs against a root stretched far below the viewport, so its only
+  reported crossing is the module's bottom edge passing the top of the screen. A plain
+  observer misses a jump (an anchor, the skip link) from below the module to above it,
+  because the state on both sides is "not intersecting", and the bar stayed up at the top of
+  the page. Found in the Playwright pass after `7f59e22`; the fix is the uncommitted diff.
+- Reopen if the phone test finds the bar covering the last line of a module when the reader
+  stops scrolling, or if the founder wants it to yield near the price button too.
+
+## 2026-09-11 -- Copy review: the hero states the night, not the service
+- A review of the page copy scored it 74/100: disciplined and honest, but the hero described
+  the shape of the service (plan, set up, clear away) and never the product, then dropped
+  "the massage" with a definite article for a thing the reader had not met. Dinner did not
+  appear until Module 3 step 4. The hero now says what the night is in its first sentence: a
+  massage he gives her with cue cards beside him, then dinner on the table, and only then the
+  logistics. Product first, as in the manifesto line "You give the massage. We do everything
+  else."
+- "The first five are $2,500", read next to "five bookings a month", could mean each month
+  has five at $2,500. It means the first five ever, a founder launch price. "Our first five"
+  in the hero and the price line says so.
+- The tea variant is off the page. "The tea and the dinner are available on request" in the
+  massage question introduced a massage-free night inside an offer named Her Night, Your
+  Hands, and "Tea for Two" on an evening page read as an afternoon. The component is now
+  "Dinner for Two, Delivered". Tea remains an on-call option in the Stage 4 offer document
+  (component 3); it is not sold on the page.
+- Step 4 gains one sentence of her coming home ("She comes home to a room she does not
+  recognise, and you are the reason."). The rubric is Pull and the page evoked the night
+  nowhere but the situation paragraph. The sentence describes the scene and promises nothing
+  about her reaction, so the claim ledger is unchanged.
+- "Gone before she is home" fell from four uses to two (hero, step 3); "transform" left the
+  Setup line; the founder note lost "I believe intentionality is what builds intimacy" and
+  keeps the by-hand sentence. The founder still edits the note before publish.
+- Not changed: the answer to "Why $2,500?" stays although the voice brief says the page does
+  not justify the price. It lists what is delivered rather than arguing, and it is the
+  question men ask.
+- Reopen when night one produces documentary photographs and a first buyer conversation.
+  The remaining gap is proof, not copy.
+
+## 2026-09-11 -- One left edge for the whole page; the hero no longer bleeds
+- The founder read the hero as off-centre and the site as inconsistently indented. Measured
+  at 1440 and 1920: every module started at the container edge (184px / 424px) except the
+  situation paragraph and the founder note, which sat one grid column in (col-start-2, a
+  91px jog), and the hero image ran to the viewport edge while the text kept the container
+  margin, so on wide screens the hero had a full margin on the left and none on the right.
+- Fix: the two modules start at column 1 like everything else (the situation keeps its
+  left rule and padding, so the rule now sits on the shared edge); the hero image ends at
+  column 14 of the bleed grid, the container's right edge, instead of column 15. The hero
+  is now a centred 1120px band with the image at 615px wide, the same width as the Module 3
+  photograph. The `bleed-grid` utility stays on the section; only the image span changed.
+- Cost: hero direction C loses the editorial bleed. The founder chose balance over it.
+  Reopen if documentary photography from night one wants the bleed back; then balance it
+  by bleeding the text column's gutter too, not by re-indenting the modules.
+
+## 2026-09-11 -- No caption line above the hero headline
+- The hero opened with a small-caps "Thoughtful Moments · Dallas" directly under the header
+  wordmark "Thoughtful Moments", two name lines stacked in the first 250px. The founder
+  removed the caption; the headline now opens the text column. Dallas is still stated in the
+  qualifier line under the CTA and in the footer. The copy document carries the same note.
+
+## 2026-09-11 -- No headcount on the page; the equipment is named
+- "Two of us" / "two people" / "the two of us" appeared in step 3, the Setup component, the
+  limit paragraph under the price, and two answers. The founder removed the headcount: the
+  page now says "we" and, where the question is who comes in, "the founders". Reason: the
+  number was an operational detail the reader does not need, and it fixed the team size in
+  public before the first night. The claim ledger row reads "the founders set up and clear
+  away every one themselves".
+- The massage table, essential oils, towels and linens are now explicit: a ninth component
+  in Module 5 ("The Massage Table, Oils and Linens"), named in step 3 of the night, and first
+  in the "Why $2,500?" answer. Reason: without it a reader could assume he supplies the table
+  and the oils, and the price carries less. The Module 5 grid is five rows so the nine items
+  fill two columns (five and four), still column-first. "Nothing arrives in a box for you to
+  assemble" in "What it is not" still holds: the equipment comes and goes with us.
+
+## 2026-09-11 -- The founder note tells the truth about the founder
+- The drafted note said "I love my partner". The founder has no partner and does not want his
+  relationship status on the page, nor any reference to marriage. The note is rewritten to
+  state neither: he works more hours than he would choose, he knows what a man like him does
+  with money when he loves someone and has no time, and he names the man he wants to be
+  instead. The thesis sentence (intimacy built by hand) and the closing two sentences are
+  unchanged. No invented history, no claim of having lived the buyer's relationship.
+- "Spends it on her and calls it care" is the page's only first-person admission. It
+  replaces "everything I gave her was a function of what I earned", which presumed a her.
+- An interim draft said "I am single" and "the far side of a long marriage"; the founder
+  removed both the same day. Do not reintroduce a status line.

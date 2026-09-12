@@ -103,6 +103,32 @@ Per tech-stack.md coding standards:
   context.
 - `cn` comes from the `cn` package (shadcn's replacement for clsx + tailwind-merge),
   re-exported from `lib/utils.ts`.
+- Base UI form controls are uncontrolled and warn in the console if their `defaultValue`
+  changes after mount. When a Server Action hands values back, key each Base UI control on
+  its returned value (`key={values.date}`) so a changed field remounts and an unchanged one
+  keeps its instance. Native `textarea` does not need it.
+- A Base UI `Radio` puts the `id` you pass on its hidden native input, not on the visible
+  `role="radio"` element (which gets a generated id and `aria-labelledby` from the `<label
+  for>`). Labels and form submission work as expected; to move focus, query the
+  `[role="radio"]`, never the id.
+- Base UI `Button` with `focusableWhenDisabled` renders `aria-disabled`, not `disabled`: the
+  pending button keeps focus and its full colour, and the label change carries the state.
+
+## Server-only code and email
+- Anything that reads a secret imports `"server-only"` first (`lib/env.ts`, `lib/resend.ts`,
+  `lib/email/*`). Env is parsed lazily with zod in `lib/env.ts` so `next build` needs no
+  secrets and a missing variable fails the call with its name.
+- Mail goes through `sendEmail` in `lib/resend.ts`; message builders live in `lib/email/` and
+  return `{ subject, text, html }` with plain text first. No addresses in logs.
+- Shared form rules live in `lib/` without `server-only` (`lib/tell-us.ts`) so the client can
+  reuse the option lists and helpers; the Server Action in `app/actions/` owns the parse.
+
+## Analytics
+- `cta_hold_slot_click` locations: `hero`, `price`, `closing`, `sticky`. Add a value, never a
+  new event name, for another button.
+- Off Vercel the insights script 404s and `track()` calls queue on `window.vaq`; in a
+  production-mode Playwright run read the events there. In `next dev` they print to the
+  console instead.
 
 ## Scripts
 - `npm run typecheck` runs `next typegen && tsc --noEmit`: Next 16 route types must exist

@@ -13,7 +13,7 @@ import { Handwritten, Reveal } from "@/components/motion";
 export function FounderNote() {
   return (
     <section className="container py-20 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:py-32">
-      <div className="lg:col-span-9 lg:col-start-2">
+      <div className="lg:col-span-9 lg:col-start-1">
         <Reveal as="h3" pace="slow" className="text-h3 font-medium">
           From Irewole
         </Reveal>
@@ -23,11 +23,11 @@ export function FounderNote() {
           pace="slow"
           className="mt-6 max-w-[56ch] text-body-large"
         >
-          I am in the same position as the man this page is written for. I love
-          my partner, I work more hours than I would choose, and for a long time
-          everything I gave her was a function of what I earned, not of what I
-          paid attention to. I believe intentionality is what builds intimacy,
-          and that intimacy is built by hand, in small deliberate acts nobody
+          I work more hours than I would choose, and I know exactly what a man
+          like me does with money when he loves someone and has no time: spends
+          it on her and calls it care. I do not want to be that man. I want to be the
+          one who did it himself, with the room ready and the card in his
+          handwriting. Intimacy is built by hand, in small deliberate acts nobody
           else could have done for you. Thoughtful Moments exists so that a man
           with no hours can still do the one thing that counts. We do everything
           else.

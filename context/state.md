@@ -94,21 +94,65 @@ Last updated: 2026-09-11
   questions padding 80/56, no horizontal overflow, no new console errors. Screenshots at rest and
   with one question open were shown in the session.
 
-- [x] Prompt 8 (Module 9), on `staging`: `components/closing.tsx` (the closing action) and
-  `components/tell-us-form.tsx` (Tell Us About Her, six fields per `lib/tell-us.ts`, labels
-  verbatim, errors paired with an icon and wired by `aria-describedby`), posting to
-  `app/actions/tell-us.ts`, which validates with zod and sends the founder an email through
-  `lib/resend.ts` (`getResend`, `sendEmail`) rendered by `lib/email/tell-us.ts`. Email env is
-  parsed once in `lib/env.ts` (`server-only`); `RESEND_FROM_EMAIL` added to the env template as
-  optional. `components/sticky-cta.tsx` watches Module 3 and the form by id and shows the CTA
-  between them. Both mounted at the end of `app/page.tsx`. Gates: typecheck and lint clean.
+- [x] Prompt 8 (Module 9), on `staging` as `7f59e22`: `components/closing.tsx` (display-2 "Her date
+  is coming.", the two-sentence paragraph one sentence per line, the Button posting to
+  `createDepositSession` with `track("cta_hold_slot_click", { location: "closing" })`, all three
+  `RevealItem`s in one `RevealGroup`; a `Hairline`; then the form, which does not animate) and
+  `components/tell-us-form.tsx` (`id="tell-us"`; h3, intro and small print verbatim; date, where
+  with its hint, two textareas, the Base UI RadioGroup, email, a honeypot named `website` off
+  screen and out of the tab order, "Send it"; `useActionState` against `submitTellUs`; errors
+  under the field with a `CircleAlert` icon in `text-error`, wired by `aria-describedby`, the
+  first one taking focus; the thank-you inside a `role="status" aria-live="polite"` region that
+  exists from first render; `form_started` on first focus, `form_submitted` with the massage
+  value on success). Rules in `lib/tell-us.ts` (zod: date within 180 days of today in Dallas
+  time, where 2 to 60, texts 3 to 500, massage required, email valid); the action in
+  `app/actions/tell-us.ts` drops a filled honeypot with the same thank-you and no email; email
+  built in `lib/email/tell-us.ts`, sent by `lib/resend.ts` with the sender as reply-to; env
+  parsed once in `lib/env.ts` (`server-only`, fails closed with the variable named).
+  `components/sticky-cta.tsx`: `SlideUp` bar with "$500 holds your slot." and the Button
+  (`location: "sticky"`), shown once Module 3 (`id="how-it-works"`, added) has scrolled off the
+  top and hidden while `#tell-us` is in view; `lg:hidden`. `resend`, `zod` and `server-only`
+  installed; `RESEND_FROM_EMAIL` added to the env template as optional.
+  Gates: typecheck, lint, `next build` clean. Playwright at 390 against `next start` with the
+  Resend SDK pointed at a local mock (`RESEND_BASE_URL`): empty submit shows six errors, each
+  with an icon, `aria-invalid` and `aria-describedby` on every control including the radiogroup,
+  focus on the date; keyboard-only completion (Tab, typed date, arrow to "nervous", Enter)
+  reaches the thank-you, the form unmounts, `form_started` then `form_submitted
+  {massage: "nervous"}` are queued once each; one POST /emails with subject "Tell Us About Her:
+  February 14, 2027", `reply_to` the sender, every answer in text and HTML; the honeypot run
+  shows the thank-you, no POST and no `form_submitted`; Enter, Enter, click on one form sends
+  one email; pending shows "Sending…" with focus kept and "Sending your answers." in the status
+  region; the bar is absent at the top and over Module 3, present after it, gone while the form
+  is in view or a field is focused, absent at 1280; reduced motion renders the closing at rest;
+  no horizontal overflow. Screenshots (empty, errors, pending, success at 390; bar; 1280) shown
+  in the session. Console: only the known 404s (favicon, /terms and /privacy prefetch, the
+  Vercel insights script off Vercel).
+  Not yet shown: a submission in a real inbox. `.env` has every value empty locally, so the
+  action returned the fail-closed message and the server log named `RESEND_API_KEY`; the mock
+  proves everything up to Resend accepting the key.
+  Uncommitted after `7f59e22`: `components/sticky-cta.tsx` observes Module 3 against a root
+  stretched below the viewport, so a jump from below the module to above it (an anchor, the
+  skip link) still drops the bar; the committed version left it up after `scrollTo(0, 0)`.
+
+- [x] Copy review, 2026-09-11 (uncommitted, on `staging`): the page scored 74/100 and the fixes
+  are applied to the components and to `usl-build/6-landing-page-copy.md` in step. Hero states
+  the night before the logistics; "our first five bookings"; tea variant off the page; one
+  sentence of her coming home in step 4; repetition cut; founder note trimmed. Reasoning in
+  `context/decisions.md` (Copy review entry). Claim ledger unchanged.
 
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
 
 ## What is next
+- [ ] Commit the sticky-bar observer fix in `components/sticky-cta.tsx` on `staging` (see Prompt 8 above).
+- [ ] Commit the copy review edits and the layout fix (hero image inside the container; situation and founder note on the shared left edge; see decisions.md), the headcount removal and the ninth component (massage table, oils, linens), and the founder note rewritten with no relationship status on `staging`; open the preview and read the hero on a phone.
+- [ ] Founder: put `RESEND_API_KEY` and `NOTIFY_EMAIL` in `.env` (and Vercel), submit the form once, and
+  confirm the email lands; that closes the Prompt 8 output gate.
 - [ ] Run Prompts 4, 9 and 10 of `usl-build/6-landing-page-build-sequence.md` on `staging`.
+  Prompt 4 note: the checkout stub redirects to `/#price`, which re-mounts the page after the
+  Server Action, so `scroll_price` fires a second time after any "Hold a slot" press. It goes
+  away once the redirect leaves for Stripe; check the event fires once in Prompt 10.
 - [ ] `/favicon.ico` 404s on the empty page (the only console error). Prompt 9 adds the favicon and OG image.
 - [ ] Founder, in parallel: two food-partner quotes and one florist quote; waiver, contraindication card and delivery-commitment wording to a professional; insurance quote; domain and hello@ mailbox; Stripe account (test mode); USPTO and domain check for Thoughtful Moments.
 - [ ] Founder edits the note in Module 8 and writes the twelve cue cards (Module 4 shows card 4 as the shape).

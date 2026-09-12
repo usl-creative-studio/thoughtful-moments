@@ -31,12 +31,12 @@ const steps: readonly Step[] = [
   {
     lead: "The afternoon.",
     body:
-      "Two of us arrive while she is out. The table, the linens, the candles, the scent, the music, the flowers, the food plated to your instructions. We are gone before she is home.",
+      "We arrive while she is out. The massage table, the oils, the towels and linens, the candles, the scent, the music, the flowers, the dinner table laid and the food plated to your instructions. We are gone before she is home.",
   },
   {
     lead: "The night.",
     body:
-      "This part is yours. You hand her the card. You give her the massage, cue cards beside you. When you are done, dinner is on the table.",
+      "This part is yours. She comes home to a room she does not recognise, and you are the reason. You hand her the card. You give her the massage, cue cards beside you. When you are done, dinner is on the table.",
     yours: true,
   },
   {

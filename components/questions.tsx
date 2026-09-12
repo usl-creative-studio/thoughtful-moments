@@ -33,12 +33,12 @@ const pairs: readonly Pair[] = [
   {
     question: "Why $2,500?",
     answer:
-      "Two people, an afternoon and a morning in your home, food from a kitchen we trust, flowers, and the hours of planning you do not have. The price is the night done properly, once.",
+      "A professional massage table, oils and linens, an afternoon and a morning in your home, food from a kitchen we trust, flowers, and the hours of planning you do not have. The price is the night done properly, once.",
   },
   {
     question: "Who exactly is coming into my house?",
     answer:
-      "The two of us. We are the founders, and for now we do every setup ourselves. We arrive at the time we agree, we take no photos, and we are gone before she is home.",
+      "The founders. For now we do every setup ourselves. We arrive at the time we agree, we take no photos, and we leave well before she is back.",
   },
   {
     question: "How do I get her out of the house?",
@@ -48,7 +48,7 @@ const pairs: readonly Pair[] = [
   {
     question: "What if she is not into massage?",
     answer:
-      "Then this is not the right night for her, and we would rather tell you that on the call than take your money. Ask her what she loves before you hold a slot; the tea and the dinner are available on request if that suits her better.",
+      "Then this is not the right night for her, and we would rather tell you that on the call than take your money. Ask her what she loves before you hold a slot.",
   },
   {
     question: "What about the food?",

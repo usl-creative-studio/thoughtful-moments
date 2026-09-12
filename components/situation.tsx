@@ -14,7 +14,7 @@ export function Situation() {
       <Reveal
         as="p"
         pace="slow"
-        className="border-l border-rule pl-6 text-pretty text-body-large italic lg:col-span-11 lg:col-start-2 lg:pl-8"
+        className="border-l border-rule pl-6 text-pretty text-body-large italic lg:col-span-11 lg:col-start-1 lg:pl-8"
       >
         You love her, and she knows it. She also knows you have been gone since six and home
         since nine for most of this year. Money is easy for you now, which is why the necklace

@@ -47,13 +47,13 @@ export function Price() {
 
       {/* One paragraph, two sentences; each sentence takes its own line. */}
       <Reveal as="p" pace="slow" className="mt-8 text-price font-medium">
-        <span className="block">$2,500 for the first five bookings.</span>{" "}
+        <span className="block">$2,500 for our first five bookings.</span>{" "}
         <span className="block">$3,500 after that.</span>
       </Reveal>
 
       <Reveal as="p" className="measure mt-8 text-body">
-        We take five a month, because two of us set up and clear away every one, and we will not
-        send anyone else into your home.
+        We take five a month, because we set up and clear away every one ourselves, and we will
+        not send anyone else into your home.
       </Reveal>
 
       <div className="measure mt-10">

@@ -3,8 +3,8 @@ import { Hairline, Reveal, RevealGroup, RevealItem } from "@/components/motion";
 /**
  * Module 5, what is included, and what is not. Copy is verbatim from
  * usl-build/6-landing-page-copy.md under the Stage 5 display names. A dense
- * module (80px/56px padding-block). The eight components are a definition
- * list: at desktop two columns of four, filled column-first so the reading
+ * module (80px/56px padding-block). The nine components are a definition
+ * list: at desktop two columns (five and four), filled column-first so the reading
  * order is the document order; on mobile one column. Every pair opens with a
  * hairline, so the rules read as rows. No borders, icons, values or total.
  */
@@ -21,10 +21,14 @@ const included: readonly Item[] = [
   },
   {
     name: "The Setup.",
-    body: "Two of us transform the room while she is out: table, linens, candles, scent, music. Gone before she is home.",
+    body: "We set the room while she is out: candles, scent, music, the dinner table laid.",
   },
   {
-    name: "Dinner or Tea for Two, Delivered.",
+    name: "The Massage Table, Oils and Linens.",
+    body: "A professional massage table, essential oils, towels and fresh linens, brought in for the night and taken away with everything else.",
+  },
+  {
+    name: "Dinner for Two, Delivered.",
     body: "From a Dallas kitchen we work with, plated to your instructions, so you serve it.",
   },
   {
@@ -58,7 +62,7 @@ export function Included() {
 
       <RevealGroup
         as="dl"
-        className="mt-10 lg:grid lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-4 lg:gap-x-6"
+        className="mt-10 lg:grid lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-5 lg:gap-x-6"
       >
         {included.map((item) => (
           <RevealItem key={item.name} className="pb-6">
