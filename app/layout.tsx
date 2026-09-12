@@ -28,9 +28,25 @@ const homemadeApple = Homemade_Apple({
   variable: "--font-homemade-apple",
 });
 
+/**
+ * Absolute URLs for the canonical link and the Open Graph image come from
+ * NEXT_PUBLIC_SITE_URL. Unset (a fresh clone, `next build` without env) it falls
+ * back to localhost so the build never fails on metadata; in every deployment the
+ * variable is set (context/production-checklist.md, section 3).
+ */
+const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000");
+
+const title = "Thoughtful Moments · Her Night, Your Hands";
+const description = "One night at home, unmistakably yours. Dallas.";
+
 export const metadata: Metadata = {
-  title: "Thoughtful Moments · Her Night, Your Hands",
-  description: "One night at home, unmistakably yours. Dallas.",
+  metadataBase: siteUrl,
+  title: { default: title, template: "%s · Thoughtful Moments" },
+  description,
+  alternates: { canonical: "/" },
+  openGraph: { title, description, url: "/", siteName: "Thoughtful Moments", locale: "en_US", type: "website" },
+  twitter: { card: "summary_large_image", title, description },
+  // noindex for the 30-day test; the OG image and canonical still work for a shared link.
   robots: { index: false, follow: false },
 };
 
