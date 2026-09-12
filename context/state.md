@@ -142,7 +142,8 @@ Last updated: 2026-09-11
 
 - [x] Committed and pushed to `staging` 2026-09-11: `ba4a30c` (sticky-bar observer fix) and
   `28a176c` (copy review edits, centred hero, one left edge, equipment named, founder note).
-  Next: open the staging preview on a phone and read the hero and Module 5 before promoting.
+  Promoted to `main` the same day (fast-forward to `a64808b`) at the founder's request; the
+  staging preview was not confirmed on a phone first. Read the production URL on a phone.
 
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
