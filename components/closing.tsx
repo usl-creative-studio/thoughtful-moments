@@ -1,10 +1,8 @@
 "use client";
 
-import { track } from "@vercel/analytics";
-import { createDepositSession } from "@/app/actions/checkout";
+import { HoldSlotButton } from "@/components/hold-slot-button";
 import { Hairline, RevealGroup, RevealItem } from "@/components/motion";
 import { TellUsForm } from "@/components/tell-us-form";
-import { Button } from "@/components/ui/button";
 
 /**
  * Module 9, the closing action. Copy is verbatim from
@@ -28,14 +26,7 @@ export function Closing() {
         </RevealItem>
 
         <RevealItem className="mt-8">
-          <form action={createDepositSession}>
-            <Button
-              type="submit"
-              onClick={() => track("cta_hold_slot_click", { location: "closing" })}
-            >
-              Hold a slot
-            </Button>
-          </form>
+          <HoldSlotButton location="closing" />
         </RevealItem>
       </RevealGroup>
 

@@ -116,8 +116,16 @@ Per tech-stack.md coding standards:
 
 ## Server-only code and email
 - Anything that reads a secret imports `"server-only"` first (`lib/env.ts`, `lib/resend.ts`,
-  `lib/email/*`). Env is parsed lazily with zod in `lib/env.ts` so `next build` needs no
-  secrets and a missing variable fails the call with its name.
+  `lib/stripe.ts`, `lib/email/*`). Env is parsed lazily with zod in `lib/env.ts` so `next build`
+  needs no secrets and a missing variable fails the call with its name. Email and Stripe are
+  separate schemas (`getEmailEnv`, `getStripeEnv`) so one feature never fails for the other's
+  missing key.
+- Stripe: the client comes from `getStripe()` in `lib/stripe.ts`; the deposit's amount, name
+  and metadata are the `deposit` constants there. Webhook handlers read the raw body with
+  `request.text()` before `constructEvent`; a parsed body breaks the signature.
+- Local proof without keys: `RESEND_BASE_URL` and `STRIPE_API_BASE_URL` point both SDKs at a
+  local stand-in under `next start`; the second is read only by `lib/stripe.ts` and must stay
+  unset in every deployment.
 - Mail goes through `sendEmail` in `lib/resend.ts`; message builders live in `lib/email/` and
   return `{ subject, text, html }` with plain text first. No addresses in logs.
 - Shared form rules live in `lib/` without `server-only` (`lib/tell-us.ts`) so the client can
@@ -125,7 +133,15 @@ Per tech-stack.md coding standards:
 
 ## Analytics
 - `cta_hold_slot_click` locations: `hero`, `price`, `closing`, `sticky`. Add a value, never a
-  new event name, for another button.
+  new event name, for another button. The button is `HoldSlotButton` in
+  `components/hold-slot-button.tsx`; pass `location`, never copy the form.
+- `track()` from `@vercel/analytics` drops the call silently until `<Analytics />` has
+  installed `window.va`, and it does that in its own effect, which runs after any page
+  component's mount effect. An event fired on mount must wait for `window.va` (the package
+  declares it on `Window`); see `components/deposit-completed.tsx`. Events fired on a click
+  never hit this.
+- Server-side events use `track` from `@vercel/analytics/server` and pass the request
+  headers (`{ headers: await headers() }`); off Vercel the call logs and drops.
 - Off Vercel the insights script 404s and `track()` calls queue on `window.vaq`; in a
   production-mode Playwright run read the events there. In `next dev` they print to the
   console instead.

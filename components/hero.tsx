@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { track } from "@vercel/analytics";
-import { createDepositSession } from "@/app/actions/checkout";
+import { HoldSlotButton } from "@/components/hold-slot-button";
 import { RevealGroup, RevealItem, SettleIn } from "@/components/motion";
-import { Button } from "@/components/ui/button";
 
 /**
  * Module 1, the decision zone. Copy is verbatim from
@@ -59,14 +57,7 @@ export function Hero() {
           </RevealItem>
 
           <RevealItem className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <form action={createDepositSession}>
-              <Button
-                type="submit"
-                onClick={() => track("cta_hold_slot_click", { location: "hero" })}
-              >
-                Hold a slot
-              </Button>
-            </form>
+            <HoldSlotButton location="hero" />
             <a href="#tell-us" className="text-body text-ink">
               Not ready? Tell us about her.
             </a>

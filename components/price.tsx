@@ -2,17 +2,15 @@
 
 import { useEffect, useRef } from "react";
 import { track } from "@vercel/analytics";
-import { createDepositSession } from "@/app/actions/checkout";
+import { HoldSlotButton } from "@/components/hold-slot-button";
 import { Hairline, Reveal } from "@/components/motion";
-import { Button } from "@/components/ui/button";
 
 /**
  * Module 6, the price. Copy is verbatim from usl-build/6-landing-page-copy.md.
  * The page states the price and does not argue it: the price line in the
  * `text-price` token (display-1 held at 56px), the limit with its reason, the
  * deposit terms, and the delivery commitment set apart by a hairline rule and
- * nothing else. `id="price"` is the Checkout cancel target and the stub's
- * redirect. `scroll_price` fires once when half the module is on screen.
+ * nothing else. `id="price"` is the Checkout cancel target. `scroll_price` fires once when half the module is on screen.
  */
 
 /** How much of the module must be visible before `scroll_price` fires. */
@@ -72,14 +70,7 @@ export function Price() {
       </div>
 
       <Reveal className="mt-10">
-        <form action={createDepositSession}>
-          <Button
-            type="submit"
-            onClick={() => track("cta_hold_slot_click", { location: "price" })}
-          >
-            Hold a slot
-          </Button>
-        </form>
+        <HoldSlotButton location="price" />
       </Reveal>
     </section>
   );

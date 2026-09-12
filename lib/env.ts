@@ -5,7 +5,9 @@ import { z } from "zod";
  * Server-side environment, validated once on first use rather than at import so
  * `next build` does not need the secrets. A missing variable throws with its
  * name, so a feature fails closed instead of sending nothing quietly
- * (context/production-checklist.md, section 3).
+ * (context/production-checklist.md, section 3). Email and Stripe are parsed
+ * separately so the form can send without Stripe being configured and the
+ * webhook can verify a signature without Resend.
  */
 const emailSchema = z.object({
   RESEND_API_KEY: z.string().min(1, "RESEND_API_KEY is not set"),
@@ -29,4 +31,30 @@ export function getEmailEnv(): EmailEnv {
     RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL || undefined,
   });
   return emailEnv;
+}
+
+const stripeSchema = z.object({
+  // The secret key only. The publishable key is never read on the server.
+  STRIPE_SECRET_KEY: z.string().min(1, "STRIPE_SECRET_KEY is not set"),
+  STRIPE_WEBHOOK_SECRET: z.string().min(1, "STRIPE_WEBHOOK_SECRET is not set"),
+  // Checkout needs absolute return URLs; trailing slash dropped so `${url}/held` is clean.
+  NEXT_PUBLIC_SITE_URL: z
+    .url("NEXT_PUBLIC_SITE_URL must be an absolute URL")
+    .transform((url) => url.replace(/\/+$/, "")),
+  // Optional: point the SDK at a local stand-in such as stripe-mock. Unset in every deployment.
+  STRIPE_API_BASE_URL: z.url().optional(),
+});
+
+export type StripeEnv = z.infer<typeof stripeSchema>;
+
+let stripeEnv: StripeEnv | undefined;
+
+export function getStripeEnv(): StripeEnv {
+  stripeEnv ??= stripeSchema.parse({
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+    STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+    STRIPE_API_BASE_URL: process.env.STRIPE_API_BASE_URL || undefined,
+  });
+  return stripeEnv;
 }

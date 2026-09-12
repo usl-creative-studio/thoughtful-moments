@@ -164,6 +164,52 @@ Last updated: 2026-09-11
   Output still to show: a link preview from a real deploy (the OG URL is absolute only once
   `NEXT_PUBLIC_SITE_URL` is set in Vercel).
 
+- [x] Prompt 4 (Stripe deposit, /held, webhook, emails), on `staging`: `lib/stripe.ts` (server-only
+  client built on first use, `appInfo` set; `deposit` constants: usd, 50000, "Deposit: Her Night,
+  Your Hands", metadata offer/cohort), `lib/env.ts` gains `getStripeEnv` (secret key, webhook
+  secret, `NEXT_PUBLIC_SITE_URL` as an absolute URL with the trailing slash dropped, optional
+  `STRIPE_API_BASE_URL` for a local stand-in; the publishable key is never read server-side),
+  `app/actions/checkout.ts` (`createDepositSession`: `mode: 'payment'`, one `price_data` line
+  item, `success_url` `/held?session_id={CHECKOUT_SESSION_ID}`, `cancel_url` `/#price`,
+  `customer_creation: 'always'`, then `track('deposit_started')` from `@vercel/analytics/server`
+  with the request headers, then `redirect(session.url)`), `components/hold-slot-button.tsx`
+  (the one "Hold a slot" control, now used by the hero, price, closing and sticky bar: a form
+  posting to the action, `useFormStatus` pending label "Opening secure checkout…",
+  `focusableWhenDisabled` so focus and colour hold, and a `role="status" aria-live="polite"`
+  region present from first render that carries the same words), `app/held/page.tsx` (display-2
+  "Your slot is held.", the approved paragraph, "Back to Her Night, Your Hands"; reads
+  `session_id` and hands it to `components/deposit-completed.tsx`, which fires
+  `deposit_completed` once, after waiting for `window.va` to exist), `lib/email/deposit.ts`
+  (the buyer confirmation per the copy document, signed "The founders / Thoughtful Moments,
+  Dallas", and the founder notification with customer, amount and session id) and
+  `app/api/stripe/webhook/route.ts` (400 for a missing or bad signature; on
+  `checkout.session.completed` or `checkout.session.async_payment_succeeded` with
+  `payment_status: paid`, the confirmation to the customer with reply-to NOTIFY_EMAIL and the
+  notification to NOTIFY_EMAIL; 200 with `handled: false` for other events and unpaid sessions;
+  500 if an email fails so Stripe retries; ids only in the log). `stripe` 22.6.2 installed.
+  Gates: typecheck, lint, `next build` clean. Every key in `.env` is empty, so the walk ran
+  against `next start` with the Stripe SDK and the Resend SDK pointed at one local stand-in
+  (`STRIPE_API_BASE_URL`, `RESEND_BASE_URL`), Playwright at 390 and 1280, 35/35: the hero
+  button posts a session with every parameter above and the secret key as the bearer; the
+  stand-in's Pay link lands on /held with the heading, the paragraph at 32px/40px display-2, the
+  link back and `deposit_completed` queued once (and not at all without `session_id`); Cancel
+  lands on `/#price` with the module at the top; a delayed create shows "Opening secure
+  checkout…" on the pressed button and in its status region, the button `aria-disabled` with
+  focus kept, the other buttons idle, `cta_hold_slot_click` once with its location (hero and
+  sticky both checked); the sticky bar carries the same control; no horizontal overflow; the
+  only 4xx is the Vercel insights script. Webhook, posted with `generateTestHeaderString`:
+  wrong secret 400, missing header 400, unrelated event 200 unhandled, unpaid session 200
+  unhandled, paid session 200 with both emails captured (to the buyer "Your slot is held" with
+  reply-to the founder; to the founder "New deposit: Her Night, Your Hands" with "Test Buyer
+  <buyer@example.com>", "$500.00" and the session id) and the server log "deposit emails
+  sent". Screenshots of /held at 390 and 1280 and the pending state at 390 shown in the session.
+  Not yet shown: a real test-mode payment and the two emails in an inbox; both wait on keys.
+  One fix on the way: `track()` from `@vercel/analytics` drops the call while `window.va` is
+  undefined, and `<Analytics />` installs it in its own effect, which runs after a page
+  component's effect; the /held tracker polls for it (context/conventions.md).
+  The old stub's redirect to `/#price` is gone, so `scroll_price` no longer fires twice after
+  a "Hold a slot" press.
+
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
@@ -171,10 +217,15 @@ Last updated: 2026-09-11
 ## What is next
 - [ ] Founder: put `RESEND_API_KEY` and `NOTIFY_EMAIL` in `.env` (and Vercel), submit the form once, and
   confirm the email lands; that closes the Prompt 8 output gate.
-- [ ] Run Prompts 4 and 10 of `usl-build/6-landing-page-build-sequence.md` on `staging` (Prompt 9 done 2026-09-11; Prompt 4 in progress in a parallel session the same day).
-  Prompt 4 note: the checkout stub redirects to `/#price`, which re-mounts the page after the
-  Server Action, so `scroll_price` fires a second time after any "Hold a slot" press. It goes
-  away once the redirect leaves for Stripe; check the event fires once in Prompt 10.
+- [ ] Run Prompt 10 of `usl-build/6-landing-page-build-sequence.md` on `staging` (Prompts 4 and 9 done 2026-09-11).
+- [ ] Founder, to close the Prompt 4 output gate: put the Stripe test keys in `.env` and in Vercel
+  (`STRIPE_SECRET_KEY`, `NEXT_PUBLIC_SITE_URL`); in the Stripe dashboard (test mode) add a webhook
+  endpoint at `<site>/api/stripe/webhook` for `checkout.session.completed` and
+  `checkout.session.async_payment_succeeded` and put its signing secret in `STRIPE_WEBHOOK_SECRET`
+  (locally, `stripe listen --forward-to localhost:3000/api/stripe/webhook` prints one); pay once
+  with 4242 4242 4242 4242, confirm /held, and confirm both emails land (the buyer one goes to the
+  card's email; until a domain is verified in Resend, `RESEND_FROM_EMAIL` unset means only the
+  account owner's address receives mail, so use it as the card email for the test).
 - [x] `/favicon.ico` 404 closed by Prompt 9 (`app/icon.tsx`); the Vercel insights script 404 off Vercel is the only console error left.
 - [ ] Founder: set `NEXT_PUBLIC_SITE_URL` in Vercel (staging and production) so the canonical and the OG image URL are absolute, then paste the staging URL into a link-preview checker and confirm the image shows.
 - [ ] Founder: write the /terms and /privacy text after professional review and replace the TODO notes (`app/terms/page.tsx`, `app/privacy/page.tsx`).

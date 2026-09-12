@@ -337,3 +337,32 @@ A log of why things are built the way they are. Write once, never delete.
 - Reopen when the founder supplies the reviewed text (replace the notes and the draft line),
   when documentary photography from night one exists (the preview may then carry the room),
   or if the founder wants a mark rather than a letter.
+
+## 2026-09-11 -- Deposit path at Prompt 4
+- The Checkout Session is created in a Server Action and the reader is sent to Stripe's hosted
+  page; the site never sees the card. `customer_creation: 'always'` so every deposit is a
+  Customer in the dashboard, which is the only record the validation phase keeps (no database,
+  per the earlier entry). Refunds stay manual from the dashboard.
+- The webhook is the source of truth for "paid", not /held: the return page only shows the
+  approved copy and fires `deposit_completed` when `session_id` is present. It handles
+  `checkout.session.async_payment_succeeded` as well as `completed` and gates both on
+  `payment_status: paid`, per Stripe's fulfilment guide, so a delayed payment method never
+  gets a "held" email before the money arrives. An email failure returns 500 so Stripe retries;
+  the two emails are not idempotent across retries, an accepted risk at five bookings a month.
+- `deposit_started` fires server-side in the action, once per session created rather than once
+  per click, with the request headers so Vercel can attribute it. The click itself is
+  `cta_hold_slot_click` with its location. Off Vercel the server call logs and drops.
+- The buyer confirmation's reply-to is NOTIFY_EMAIL so his two or three call windows land with
+  the founder; the founder notification has no reply-to and names his address in the body.
+- One "Hold a slot" component (`components/hold-slot-button.tsx`) replaces four copies of the
+  form, so the pending state, the disabled state and the status region are written once.
+- The review gate asked for a real test-mode payment. Every key in `.env` was empty, so the
+  gate was walked against a local stand-in for both the Stripe API and Resend
+  (`STRIPE_API_BASE_URL`, `RESEND_BASE_URL`; the first is a local-only variable that the Stripe
+  client reads to set `host`, `port` and `protocol`). That proves the request the SDK sends,
+  the return and cancel paths, the pending state, the analytics events, the signature check
+  and the two emails as built; it does not prove Stripe or Resend accepting the keys. The
+  founder's one real test payment (state.md) closes that.
+- Reopen if the experiment passes and bookings need a record beyond Stripe (then Supabase per
+  tech-stack.md), or if a retry ever double-sends the buyer email (then key sends on the
+  session id).
