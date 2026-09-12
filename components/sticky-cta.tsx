@@ -27,10 +27,16 @@ export function StickyCta() {
     const form = document.getElementById(formId);
     if (!steps || !form) return;
 
-    // Past Module 3 once its bottom edge has left through the top of the viewport.
-    const stepsObserver = new IntersectionObserver(([entry]) => {
-      if (entry) setPastSteps(!entry.isIntersecting && entry.boundingClientRect.bottom < 0);
-    });
+    // Past Module 3 once its bottom edge has left through the top of the viewport. The root
+    // is stretched far below the viewport so that edge is the only crossing the observer
+    // reports, and a jump (an anchor, the skip link) from below the module to above it
+    // still flips the state.
+    const stepsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry) setPastSteps(!entry.isIntersecting);
+      },
+      { rootMargin: "0px 0px 100000px 0px" },
+    );
     const formObserver = new IntersectionObserver(([entry]) => {
       if (entry) setFormInView(entry.isIntersecting);
     });
