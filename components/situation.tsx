@@ -16,10 +16,10 @@ export function Situation() {
         pace="slow"
         className="border-l border-rule pl-6 text-pretty text-body-large italic lg:col-span-11 lg:col-start-1 lg:pl-8"
       >
-        You love her, and she knows it. She also knows you have been gone since six and home
-        since nine for most of this year. Money is easy for you now, which is why the necklace
-        lands a little softer each time. What she has not had in a while is an evening where your
-        attention was the whole point.
+        You love her, and she knows it. She also knows you have been out the door at six and home
+        at nine for most of this year. Money is easy for you now, which is why the necklace lands a
+        little softer each time. What she has not had in a while is an evening where your attention
+        was the whole point.
       </Reveal>
     </section>
   );
