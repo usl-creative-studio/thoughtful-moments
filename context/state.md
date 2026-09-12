@@ -140,13 +140,15 @@ Last updated: 2026-09-11
   sentence of her coming home in step 4; repetition cut; founder note trimmed. Reasoning in
   `context/decisions.md` (Copy review entry). Claim ledger unchanged.
 
+- [x] Committed and pushed to `staging` 2026-09-11: `ba4a30c` (sticky-bar observer fix) and
+  `28a176c` (copy review edits, centred hero, one left edge, equipment named, founder note).
+  Next: open the staging preview on a phone and read the hero and Module 5 before promoting.
+
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
 
 ## What is next
-- [ ] Commit the sticky-bar observer fix in `components/sticky-cta.tsx` on `staging` (see Prompt 8 above).
-- [ ] Commit the copy review edits and the layout fix (hero image inside the container; situation and founder note on the shared left edge; see decisions.md), the headcount removal and the ninth component (massage table, oils, linens), and the founder note rewritten with no relationship status on `staging`; open the preview and read the hero on a phone.
 - [ ] Founder: put `RESEND_API_KEY` and `NOTIFY_EMAIL` in `.env` (and Vercel), submit the form once, and
   confirm the email lands; that closes the Prompt 8 output gate.
 - [ ] Run Prompts 4, 9 and 10 of `usl-build/6-landing-page-build-sequence.md` on `staging`.
