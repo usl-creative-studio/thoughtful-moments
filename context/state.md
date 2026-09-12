@@ -214,6 +214,10 @@ Last updated: 2026-09-11
   three bookings, $2,500 after; $3,500 is off the page. Applied in the hero, the price module (with
   the reason sentence), the Module 7 question, the copy document, conventions and the Stage 3 packet.
 
+- [x] Promoted to `main` 2026-09-11 (fast-forward to `3007441`: Prompt 9, Prompt 4 and the price
+  revision) at the founder's request; the staging preview was not opened on a phone first, and the
+  Stripe keys are not yet in Vercel, so "Hold a slot" fails closed in production until they are.
+
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
