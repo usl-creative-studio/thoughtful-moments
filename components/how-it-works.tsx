@@ -54,7 +54,7 @@ const leadClass = "font-bold before:content-[counter(step)_'._']";
 
 export function HowItWorks() {
   return (
-    <section className="container py-16 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:py-24">
+    <section id="how-it-works" className="container py-16 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:py-24">
       <Reveal as="h2" className="text-display-2 font-medium lg:col-span-4 lg:col-start-1">
         How the night works
       </Reveal>

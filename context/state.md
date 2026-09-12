@@ -94,12 +94,21 @@ Last updated: 2026-09-11
   questions padding 80/56, no horizontal overflow, no new console errors. Screenshots at rest and
   with one question open were shown in the session.
 
+- [x] Prompt 8 (Module 9), on `staging`: `components/closing.tsx` (the closing action) and
+  `components/tell-us-form.tsx` (Tell Us About Her, six fields per `lib/tell-us.ts`, labels
+  verbatim, errors paired with an icon and wired by `aria-describedby`), posting to
+  `app/actions/tell-us.ts`, which validates with zod and sends the founder an email through
+  `lib/resend.ts` (`getResend`, `sendEmail`) rendered by `lib/email/tell-us.ts`. Email env is
+  parsed once in `lib/env.ts` (`server-only`); `RESEND_FROM_EMAIL` added to the env template as
+  optional. `components/sticky-cta.tsx` watches Module 3 and the form by id and shows the CTA
+  between them. Both mounted at the end of `app/page.tsx`. Gates: typecheck and lint clean.
+
 ## In progress
-- [x] Prompts 1, 2, 3, 5, 6 and 7 committed on `staging` and promoted to `main` (2026-09-11).
+- [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
 
 ## What is next
-- [ ] Run Prompts 4 and 8 to 10 of `usl-build/6-landing-page-build-sequence.md` on `staging`.
+- [ ] Run Prompts 4, 9 and 10 of `usl-build/6-landing-page-build-sequence.md` on `staging`.
 - [ ] `/favicon.ico` 404s on the empty page (the only console error). Prompt 9 adds the favicon and OG image.
 - [ ] Founder, in parallel: two food-partner quotes and one florist quote; waiver, contraindication card and delivery-commitment wording to a professional; insurance quote; domain and hello@ mailbox; Stripe account (test mode); USPTO and domain check for Thoughtful Moments.
 - [ ] Founder edits the note in Module 8 and writes the twelve cue cards (Module 4 shows card 4 as the shape).

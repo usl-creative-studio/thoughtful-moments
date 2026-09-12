@@ -6,6 +6,8 @@ import { Included } from "@/components/included";
 import { Price } from "@/components/price";
 import { Questions } from "@/components/questions";
 import { FounderNote } from "@/components/founder-note";
+import { Closing } from "@/components/closing";
+import { StickyCta } from "@/components/sticky-cta";
 
 /**
  * The landing page. Modules arrive with Prompts 2 to 8 of
@@ -22,6 +24,8 @@ export default function Page() {
       <Price />
       <Questions />
       <FounderNote />
+      <Closing />
+      <StickyCta />
     </>
   );
 }
