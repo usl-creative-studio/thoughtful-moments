@@ -1,7 +1,7 @@
 # Landing Page Copy
 ## Stage 6 Output | USL Academy
 
-**Offer:** Her Night, Your Hands (brand: Firsthand)
+**Offer:** Her Night, Your Hands (brand: Thoughtful Moments)
 **Page goal:** a $500 refundable deposit that holds one of five monthly slots; secondary: the Tell Us About Her form
 **Primary visitor:** a Dallas man, 35 to 55, in a demanding career and a committed relationship of five years or more, with her birthday or an anniversary inside 60 days
 **User:** him
@@ -77,7 +77,7 @@ Language rule: "slot" is the thing he holds, "booking" is the monthly limit, "ni
 **Job:** is this for me, what is it, what do I do.
 **Paired proof or artifact:** the prepared room, empty, one candle unlit. Placeholder (directed, generated) until a documentary photograph from night one replaces it.
 
-*Firsthand · Dallas*
+*Thoughtful Moments · Dallas*
 
 **You love her. That was never the question.**
 
@@ -170,7 +170,7 @@ We take five a month, because two of us set up and clear away every one, and we 
 ### Module 7: Questions men ask us
 
 **Job:** objections 2 to 6 in observed order, plus the price question in one sentence.
-**Paired proof or artifact:** none; the answers are the proof. No accordion.
+**Paired proof or artifact:** none; the answers are the proof. Collapsed pairs that open on demand (founder decision 2026-09-11, `context/decisions.md`; the original called for no accordion).
 
 **Questions men ask us**
 
@@ -199,7 +199,7 @@ A Dallas kitchen we work with prepares it. We plate it to your instructions befo
 
 **From Irewole**
 
-I am in the same position as the man this page is written for. I love my partner, I work more hours than I would choose, and for a long time everything I gave her was a function of what I earned, not of what I paid attention to. I believe intentionality is what builds intimacy, and that intimacy is built by hand, in small deliberate acts nobody else could have done for you. Firsthand exists so that a man with no hours can still do the one thing that counts. We do everything else.
+I am in the same position as the man this page is written for. I love my partner, I work more hours than I would choose, and for a long time everything I gave her was a function of what I earned, not of what I paid attention to. I believe intentionality is what builds intimacy, and that intimacy is built by hand, in small deliberate acts nobody else could have done for you. Thoughtful Moments exists so that a man with no hours can still do the one thing that counts. We do everything else.
 
 *Irewole Akande, Dallas*
 
@@ -232,7 +232,7 @@ Five questions. We send back a plan for the night and the price, and nothing els
 
 ### Footer
 
-Firsthand · Dallas, TX · hello@[domain] · Terms and refund policy · Privacy
+Thoughtful Moments · Dallas, TX · hello@[domain] · Terms and refund policy · Privacy
 
 (No social icons until the accounts exist.)
 

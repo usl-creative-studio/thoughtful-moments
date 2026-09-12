@@ -1,6 +1,6 @@
 # Brand Foundation One-Page
 
-**Brand:** Firsthand
+**Brand:** Thoughtful Moments
 **Category:** at-home experience nights for couples, delivered as a service (Dallas)
 **Brand architecture:** standalone brand with one flagship offer
 **Date:** 2026-09-11
@@ -8,7 +8,7 @@
 ## Why this brand exists
 
 **Founding conviction:** Intentionality breeds intimacy.
-**Brand purpose:** Firsthand exists to give busy men a way to show care that money alone cannot fake.
+**Brand purpose:** Thoughtful Moments exists to give busy men a way to show care that money alone cannot fake.
 **Brand Idea:** **Undivided attention** — the one thing she wants from him and the one thing his life never leaves room to give.
 
 ## Who it serves
@@ -20,7 +20,7 @@
 
 ## Position it owns
 
-**Positioning statement:** For a Dallas man with her date coming who wants her to feel prioritised, Firsthand is the one gift that is unmistakably his, because everything except the gesture is done for him and he is shown exactly what to do.
+**Positioning statement:** For a Dallas man with her date coming who wants her to feel prioritised, Thoughtful Moments is the one gift that is unmistakably his, because everything except the gesture is done for him and he is shown exactly what to do.
 **Point of Difference:** Everything except the gesture is done for him; the gesture is his.
 **Evidence status:** Hypothesis. Competitor placements come from Stage 1 research (not Dallas-specific); no buyer has yet paid for a night at this price.
 
@@ -51,7 +51,7 @@
 # Detailed Brand Strategy and Transfer Packet
 ## Stage 5 Output | USL Academy
 
-**Brand Name:** Firsthand
+**Brand Name:** Thoughtful Moments
 **Category:** at-home experience nights for couples, delivered as a service
 **Brand architecture:** standalone brand; one flagship offer (Her Night, Your Hands); future offers (the afternoon tea, the occasion year) sit under the same name
 **Date:** 2026-09-11
@@ -113,13 +113,13 @@ Same as user; no separate payer profile. Beneficiary note: she receives the nigh
 | Done-for-you in-home spa or chef | -2 | +2 | Stage 1 research, stated positioning | Medium | Therapists and chefs do it; setup and cleanup included |
 | Date-night box | +1 | -1 | Stage 1 research, stated positioning | Medium | He runs the box; contents are generic; no setup |
 | Doing nothing | 0 | -2 | Reasoned | High | The default |
-| Firsthand | +2 | +2 | Positioning hypothesis | Low | He does the gesture; everything else is done |
+| Thoughtful Moments | +2 | +2 | Positioning hypothesis | Low | He does the gesture; everything else is done |
 
 **Map interpretation:** the top-left corner (a stranger does it, everything handled) is crowded and capped near $1,500. The top-right corner (he does it, everything handled) is empty. That emptiness is a hypothesis: it may be empty because nobody has tried it, or because nobody will pay for it. The experiment decides.
 **Positioning evidence status:** hypothesis.
 
 **Positioning statement:**
-> For a Dallas man with her date coming who wants her to feel prioritised, Firsthand is the one gift that is unmistakably his, because everything except the gesture is done for him and he is shown exactly what to do.
+> For a Dallas man with her date coming who wants her to feel prioritised, Thoughtful Moments is the one gift that is unmistakably his, because everything except the gesture is done for him and he is shown exactly what to do.
 
 **Point of Difference:** everything except the gesture is done for him; the gesture is his.
 **Reasons to Believe:**
@@ -143,7 +143,7 @@ Same as user; no separate payer profile. Beneficiary note: she receives the nigh
 | 5 | Done-for-you in-home couples experiences at $599 to $1,499; DateBox Club $55/month | Stage 1 packet, sources 1 to 4 | 2026-09-11 | Inherited | Positioning map |
 | 6 | Mintel US Gifting 2026: 57% prefer giving moments over things; affluent gifters keep spending | https://store.mintel.com/report/us-gifting-occasions-market-report | 2026-09-11 | Inherited | Market insight |
 
-**Still unverified:** trademark database check for Firsthand in the relevant US classes; domain and handle availability for firsthand variants; Dallas-specific competitors.
+**Still unverified:** collision and trademark database check for Thoughtful Moments in the relevant US classes; domain and handle availability for thoughtful-moments variants; Dallas-specific competitors.
 
 ---
 
@@ -181,7 +181,7 @@ Same as user; no separate payer profile. Beneficiary note: she receives the nigh
 
 **Undivided attention**
 
-The one thing she wants from him and the one thing his life never leaves room to give. Every decision ladders here: the team leaves so that nothing divides the evening; the cue cards exist so that his attention is on her, not on his technique; the cleanup exists so that the morning does not take the night back. Selected by the founder over "Care she can feel" and "Made by him"; the name Firsthand carries the authorship, so the Brand Idea can carry the feeling.
+The one thing she wants from him and the one thing his life never leaves room to give. Every decision ladders here: the team leaves so that nothing divides the evening; the cue cards exist so that his attention is on her, not on his technique; the cleanup exists so that the morning does not take the night back. Selected by the founder over "Care she can feel" and "Made by him"; the name Thoughtful Moments carries the intent, so the Brand Idea can carry the feeling.
 
 ---
 
@@ -230,19 +230,19 @@ You love her. That was never the question. The question is whether she can feel 
 
 ## BRAND NAME DECISION
 
-**Selected name:** Firsthand
-**Architecture and naming territory:** standalone; the authorship territory (his hands).
-**Strategic rationale:** the point of difference in one word. He does it firsthand; she experiences it firsthand. It says nothing about spas, kits or gifting, and it pairs with the offer name as one thought: "Firsthand. Her Night, Your Hands."
-**Screening status:** Screened for exploration.
-**Legal status:** Preliminary screening only; not legal clearance.
-**Next professional check:** USPTO search in the relevant classes (services: event planning, concierge; goods: printed cards) and a domain and handle check before any paid spend or print run.
+**Selected name:** Thoughtful Moments (founder decision, 2026-09-11, overriding the Stage 5 recommendation of Firsthand)
+**Architecture and naming territory:** standalone; the intent territory (what he meant by it).
+**Strategic rationale:** the founder judged Firsthand too cold and too ambiguous for the category (it can read as an eyewitness account rather than a gift), and kept the original working name. Thoughtful Moments states the category plainly and reads as warm at first contact, which the page needs more than a clever word. The distinctiveness cost noted at screening stands and is accepted; the offer name Her Night, Your Hands and the promise "She will know it was you." carry the authorship the brand name no longer does.
+**Screening status:** Not screened. Rejected on distinctiveness during exploration; reinstated by the founder without a collision check.
+**Legal status:** No screening of any kind; not legal clearance.
+**Next professional check:** Exa or equivalent collision search for "Thoughtful Moments" in gifting, couples, wellness and hospitality, then USPTO search in the relevant classes (services: event planning, concierge; goods: printed cards) and a domain and handle check, all before any paid spend or print run.
 
 | Candidate | Check | Source and date | Finding | Status |
 |---|---|---|---|---|
-| Firsthand | Exact and similar use, category and general | Exa web search, 2026-09-11 | No use in couples, gifting, wellness, hospitality; Firsthand.ai (ad-tech), FirstHand Productions (AV) unrelated | Screened for exploration |
+| Firsthand | Exact and similar use, category and general | Exa web search, 2026-09-11 | No use in couples, gifting, wellness, hospitality; Firsthand.ai (ad-tech), FirstHand Productions (AV) unrelated | Screened for exploration; rejected by the founder 2026-09-11 (reads as cold, ambiguous) |
 | Undivided | Exact and similar use, category and general | Exa web search, 2026-09-11 | The Undivided Heart (couples retreats, coaching); UNDIVIDED nonprofit; Undivided Life; Undivided (UK agency); Undivided Experience Center | Needs specialist review; rejected as first choice |
 | Meant | Not screened | | | Unverified; rejected on navigation |
-| Thoughtful Moments | Not screened | | | Unverified; rejected on distinctiveness |
+| Thoughtful Moments | Not screened | | | Unverified; rejected on distinctiveness at exploration, then selected by the founder 2026-09-11; collision check outstanding |
 
 **Rejected finalists and reasons:** Undivided (crowded, category-adjacent collision); Meant (needs a paragraph to navigate); Thoughtful Moments (generic in the gifting category, the working name from the business plan).
 
@@ -289,8 +289,8 @@ You love her. That was never the question. The question is whether she can feel 
 
 ## TRANSFER PACKET: INPUTS FOR STAGE 6
 
-**Offer and lead-magnet names:** Her Night, Your Hands; Tell Us About Her. Brand: Firsthand.
-**Name screening status:** Screened for exploration; not legal clearance; USPTO and domain check before paid spend.
+**Offer and lead-magnet names:** Her Night, Your Hands; Tell Us About Her. Brand: Thoughtful Moments.
+**Name screening status:** Not screened; not legal clearance; collision search, USPTO and domain check before paid spend.
 **Component display names:** table above.
 **User:** a Dallas man, 35 to 55, demanding career, committed five years plus, her birthday or an anniversary inside 60 days.
 **Payer relationship:** same as user.

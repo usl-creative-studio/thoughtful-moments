@@ -32,8 +32,10 @@ export function Reveal({
 }: RevealProps) {
   const reduced = useReducedMotion() === true;
   const Tag = blockTags[as];
-  const hidden = reduced ? false : { opacity: 0, y: distance };
   const resting = { opacity: 1, y: 0 };
+  // Under reduced motion the initial state is the resting state, not `false`:
+  // `false` would adopt the server-rendered opacity 0 and fade from it.
+  const hidden = reduced ? resting : { opacity: 0, y: distance };
   const transition = { duration: duration[pace], ease: ease.hand, delay };
 
   if (on === "mount") {

@@ -1,5 +1,5 @@
 /**
- * Motion tokens for Firsthand.
+ * Motion tokens for Thoughtful Moments.
  *
  * The page moves the way a person does: slowly, once, and by hand. Every
  * primitive in components/motion reads from here; nothing sets its own
@@ -37,6 +37,8 @@ export const distance = 12;
 export const stagger = {
   /** Between items in a list, the lines of the headline, or the blocks of a text column. */
   step: 0.09,
+  /** Between the frames of a movement shown in sequence (the cue card stroke): long enough to read as one hand placing, then the next. */
+  beat: 0.35,
 } as const;
 
 /** Arrive once, when about a third of the element is on screen. */
