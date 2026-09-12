@@ -21,7 +21,7 @@
 ## 1. PAGE STRATEGY
 
 **Decision this page helps the visitor make:** whether to put $500 down, today, on a night he will deliver himself in two to three weeks, for a woman whose date is coming.
-**Trust burden:** high ($2,500, intimate, strangers in his home, novel, no proof), softened by a refundable deposit and a delivery commitment.
+**Trust burden:** high ($1,500 to $2,500, intimate, strangers in his home, novel, no proof), softened by a refundable deposit and a delivery commitment.
 **Demonstration need:** medium. He needs to see the night in sequence and see a cue card. Both are rendered in code from real copy, not photographed.
 **Why this architecture:** the visitor knows he is absent and that her date is coming; he does not know this shape of gift exists. So the page opens with recognition (the situation), explains the mechanism (how the night works) before the components, answers "will I be awkward" with a real artifact, enumerates what is included without a stacked value, states the price with its limit and the guarantee, answers the objections in their order, and closes with the founder and the action. No proof module exists because no proof exists; process transparency, the visible price, the commitment and the founder note carry trust.
 **Modules deliberately omitted:** testimonials and logos (none exist; invention forbidden); comparison table (invites the $1,499 done-for-you comparison; Stage 4 forbids fighting on parts); pricing tiers (one offer); stacked total value (forbidden); countdown or manufactured scarcity (the five-booking limit is real and stated once with its reason); accordion FAQ (hiding objections is the opposite of answering them).
@@ -36,7 +36,7 @@
 | 3 | How the night works | Same person | What actually happens, and what do I have to do? | Five-step run of the night; step 4 is his |
 | 4 | The part that has to be yours | Same person | Will I be awkward? | A real cue card rendered on the page |
 | 5 | What is included, and what is not | Same person | What am I paying for? | Nine display-named components; two lines on what it is not |
-| 6 | The price | Same person | Is $2,500 reasonable, and what if it goes wrong? | Price, the limit and its reason, deposit terms, delivery commitment |
+| 6 | The price | Same person | Is the price reasonable, and what if it goes wrong? | Price, the limit and its reason, deposit terms, delivery commitment |
 | 7 | Questions men ask us | Same person | The six objections | Answers in his language, in observed order |
 | 8 | From Irewole | Same person | Who is behind this? | First-person note, signature |
 | 9 | Closing action and Tell Us About Her | Same person | Now what? | Deposit CTA; five-question form |
@@ -83,7 +83,7 @@ Language rule: "slot" is the thing he holds, "booking" is the monthly limit, "ni
 
 One night at home. You give her a massage, cue cards beside you, and when you are done, dinner is on the table. We plan it on one call, set the room while she is out, and are gone before she is home. The next morning we take it all away.
 
-We take five bookings a month. Our first five are $2,500; after that, $3,500. $500 holds your slot, refundable until we confirm your date.
+We take five bookings a month. Our first three are $1,500; after that, $2,500. $500 holds your slot, refundable until we confirm your date.
 
 **[ Hold a slot ]**   Not ready? *Tell us about her.*
 
@@ -155,12 +155,14 @@ Nobody else touches her. There is no therapist. Nothing arrives in a box for you
 
 ### Module 6: The price
 
-**Job:** is $2,500 reasonable, and what if it goes wrong. The page states the price; it does not argue it. The night-out anchor was removed at the founder's pressure test (it argued, presumed, and reintroduced a comparison).
+**Job:** is the price reasonable, and what if it goes wrong. The page states the price; it does not argue it. The night-out anchor was removed at the founder's pressure test (it argued, presumed, and reintroduced a comparison).
 **Paired proof or artifact:** the limit with its reason; the deposit terms; the delivery commitment set apart by a hairline rule.
 
 **The price**
 
-$2,500 for our first five bookings. $3,500 after that.
+$1,500 for our first three bookings. $2,500 after that.
+
+The first three are priced as first nights. In return we ask for fifteen minutes afterwards, to hear how it went.
 
 We take five a month, because we set up and clear away every one ourselves, and we will not send anyone else into your home.
 
@@ -178,7 +180,7 @@ We take five a month, because we set up and clear away every one ourselves, and 
 **Will she know I did not plan it?**
 She will know you did not carry a table up the stairs. Everything she sees on the night is a choice you made on the call: the food, the flowers, the card in your handwriting, the massage from your hands. We handled the logistics. You handled her.
 
-**Why $2,500?**
+**Why the price?**
 A professional massage table, oils and linens, an afternoon and a morning in your home, food from a kitchen we trust, flowers, and the hours of planning you do not have. The price is the night done properly, once.
 
 **Who exactly is coming into my house?**
@@ -264,7 +266,7 @@ Both pages open with the caption line "Draft. Reviewed text to follow." until th
 | Claim | Source | Confidence | Where used |
 |---|---|---|---|
 | Five bookings a month; the founders set up and clear away every one themselves | Stage 2 capacity; Stage 4 scarcity | High (operational commitment) | Modules 1, 6, 7, 9 |
-| $2,500 first five bookings, $3,500 after | Stage 3 preliminary; Stage 4 price | Hypothesis under test | Modules 1, 6, 7 |
+| $1,500 first three bookings, $2,500 after (founder decision 2026-09-11; was $2,500 / $3,500) | Stage 3 preliminary; Stage 4 price; revised for proof-first launch | Hypothesis under test | Modules 1, 6, 7 |
 | $500 deposit, refundable until date confirmed; balance two weeks before | Stage 4 terms | High (terms) | Modules 1, 3, 6, 9 |
 | Delivery commitment (room, food, flowers as agreed or no charge) | Stage 4 risk reversal; needs professional review with waiver | High as a commitment; review pending | Module 6 |
 | Planning call within two days of deposit | Stage 4 funnel | High (operational) | Modules 3, 9 |

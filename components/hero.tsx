@@ -52,7 +52,7 @@ export function Hero() {
           </RevealItem>
 
           <RevealItem as="p" className="mt-4 text-body">
-            We take five bookings a month. Our first five are $2,500; after that, $3,500. $500
+            We take five bookings a month. Our first three are $1,500; after that, $2,500. $500
             holds your slot, refundable until we confirm your date.
           </RevealItem>
 

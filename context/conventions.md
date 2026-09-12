@@ -59,7 +59,8 @@ Per tech-stack.md coding standards:
   changes the document outline.
 
 ## Copy and pricing (from usl-build Stage 4)
-- Show the founding rate ($2,500) against the standard rate ($3,500); never show a
+- Show the first-nights rate ($1,500, first three bookings) against the standard rate
+  ($2,500; revised 2026-09-11 from $2,500 / $3,500) with its reason stated once; never show a
   stacked total of component parts -- the price rests on visible authorship.
 - The guarantee is a delivery commitment, never an outcome promise.
 - Copy register: emotional first.

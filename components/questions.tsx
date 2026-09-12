@@ -31,7 +31,7 @@ const pairs: readonly Pair[] = [
       "She will know you did not carry a table up the stairs. Everything she sees on the night is a choice you made on the call: the food, the flowers, the card in your handwriting, the massage from your hands. We handled the logistics. You handled her.",
   },
   {
-    question: "Why $2,500?",
+    question: "Why the price?",
     answer:
       "A professional massage table, oils and linens, an afternoon and a morning in your home, food from a kitchen we trust, flowers, and the hours of planning you do not have. The price is the night done properly, once.",
   },

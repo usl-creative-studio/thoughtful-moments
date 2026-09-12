@@ -112,7 +112,7 @@ Cash timing: deposit covers the bakery order and flowers; balance before sourcin
 
 ## 5. PRICE HYPOTHESIS
 
-**Lever and recommendation:** price per night. $2,500 founding rate for the first cohort (up to 5 nights), $3,500 standard rate shown on the page from day one.
+**Lever and recommendation:** price per night. $2,500 founding rate for the first cohort (up to 5 nights), $3,500 standard rate shown on the page from day one. *Revised 2026-09-11 (founder decision, context/decisions.md): $1,500 for the first three bookings, $2,500 after; $3,500 dropped. The experiment now tests conversion at $1,500; $2,500 is tested by bookings four and five.*
 **Terms:** $500 deposit reserves a slot and the consultation; refundable until the date is confirmed on the call; balance due before sourcing begins (about two weeks before the night); 5 nights a month; one city; includes consultation, food via partner, flowers and card, setup team, cue cards, collection and cleanup; he gives the massage.
 **Economic floor:** variable cost $435 to $985 plus $600 shadow labour = $1,035 to $1,585 per night. A 50% margin after labour puts the floor near $2,100. $2,500 clears it; anything under $2,000 does not, which is why the fail decision in Stage 2 changes the format (done-for-you-plus) rather than cutting price further.
 **Market reference:** done-for-you in-home couples massage $599 to $1,499 (two operators); massage plus chef plus florals $1,499 (one operator); DIY romantic setup $297 (one operator). Limitation: a handful of operators in three US cities; no national survey.

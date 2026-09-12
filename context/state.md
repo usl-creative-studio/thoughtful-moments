@@ -210,6 +210,10 @@ Last updated: 2026-09-11
   The old stub's redirect to `/#price` is gone, so `scroll_price` no longer fires twice after
   a "Hold a slot" press.
 
+- [x] Price revised 2026-09-11 (founder decision, see `context/decisions.md`): $1,500 for the first
+  three bookings, $2,500 after; $3,500 is off the page. Applied in the hero, the price module (with
+  the reason sentence), the Module 7 question, the copy document, conventions and the Stage 3 packet.
+
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.

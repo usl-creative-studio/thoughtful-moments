@@ -337,6 +337,30 @@ A log of why things are built the way they are. Write once, never delete.
 - Reopen when the founder supplies the reviewed text (replace the notes and the draft line),
   when documentary photography from night one exists (the preview may then carry the room),
   or if the founder wants a mark rather than a letter.
+## 2026-09-11 -- $1,500 for the first three bookings, $2,500 after; $3,500 dropped
+- The founder judged $2,500 steep for a page with no proof and wants the first nights done.
+  The page now shows $1,500 for the first three bookings and $2,500 after. $3,500 is off the
+  page. The reason for the lower price is stated once in the price module, as the conventions
+  require for any limit: "The first three are priced as first nights. In return we ask for
+  fifteen minutes afterwards, to hear how it went." That call is what the discount buys:
+  the first quotes and the time log the page cannot get any other way.
+- Floor check from the Stage 3 packet: variable cost $435 to $985 plus about $45 in card fees
+  at $1,500, so no night loses cash even in the high-cost case; founder labour (about 12
+  hours a night) is unpaid on the three, a bounded subsidy of about 36 hours. $1,500 sits at
+  the top of the done-for-you comparable band ($599 to $1,499), so it reads as market price
+  rather than a giveaway; a DIY night priced under the done-for-you band would say his hands
+  are worth less than a therapist's.
+- What changes in the test: the 30-day experiment now measures deposit conversion at $1,500,
+  not $2,500. The Stage 3 model's governing unknown ("conversion at $2,500") is deferred to
+  bookings four and five. Record the split (first-three vs after) in the day-30 result in
+  usl-build/2-solution-mvp.md Section 11.
+- The question in Module 7 is now "Why the price?" rather than "Why $2,500?", since two
+  prices are on the page. The answer is unchanged.
+- Not asked for on the page: a photograph of the room. The discretion promise says "No
+  photos", and the page must not contradict itself. If the founders want a documentary hero
+  image from a first night, ask on the call, off the page, and only of the empty room.
+- Reopen when three nights are done: either $2,500 holds for bookings four and five, or the
+  page needs the $1,500 to $2,500 step re-argued with what the three calls said.
 
 ## 2026-09-11 -- Deposit path at Prompt 4
 - The Checkout Session is created in a Server Action and the reader is sent to Stripe's hosted

@@ -45,11 +45,16 @@ export function Price() {
 
       {/* One paragraph, two sentences; each sentence takes its own line. */}
       <Reveal as="p" pace="slow" className="mt-8 text-price font-medium">
-        <span className="block">$2,500 for our first five bookings.</span>{" "}
-        <span className="block">$3,500 after that.</span>
+        <span className="block">$1,500 for our first three bookings.</span>{" "}
+        <span className="block">$2,500 after that.</span>
       </Reveal>
 
       <Reveal as="p" className="measure mt-8 text-body">
+        The first three are priced as first nights. In return we ask for fifteen minutes
+        afterwards, to hear how it went.
+      </Reveal>
+
+      <Reveal as="p" className="measure mt-4 text-body">
         We take five a month, because we set up and clear away every one ourselves, and we will
         not send anyone else into your home.
       </Reveal>
