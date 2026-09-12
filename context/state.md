@@ -218,6 +218,10 @@ Last updated: 2026-09-11
   revision) at the founder's request; the staging preview was not opened on a phone first, and the
   Stripe keys are not yet in Vercel, so "Hold a slot" fails closed in production until they are.
 
+- [x] Vercel Web Analytics enabled on the project 2026-09-11 (founder, dashboard). `<Analytics />`
+  was already mounted in `app/layout.tsx`; the insights script serves from the first deploy after
+  the switch, so the page views and the custom events start recording from that deploy.
+
 ## In progress
 - [x] Prompts 1, 2, 3, 5, 6, 7 and 8 committed on `staging` and promoted to `main` (2026-09-11).
   Founder review gate still open: walk the Vercel preview on a phone before the page goes to real users.
